@@ -12,7 +12,14 @@ node_t *insertAtBeginning(node_t *head, int data);
 /*Function to insert a new node at the beginning of the list*/
 node_t *insertAtBeginning(node_t *head, int data) {
 	/*Create a new node and set its data element*/
-	node_t *newNode = malloc(sizeof(node_t));
+	node_t *newNode;
+	newNode = malloc(sizeof(node_t));
+
+	if (newNode == NULL)
+	{
+		return NULL;/*allocation failed*/
+	}
+
 	newNode->data = data;
 
 	/*Set the new node's next pointer to the current head*/
