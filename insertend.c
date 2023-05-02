@@ -11,7 +11,7 @@ typedef struct Node {
 node_t *insertAtEnd(node_t *head, int data) {
 	/*Create a new node and set its data element*/
 	node_t *newNode;
-	node_t currentNode;
+	node_t *currentNode;
 
 	newNode = malloc(sizeof(node_t));
 	if (newNode == NULL)
@@ -27,7 +27,7 @@ node_t *insertAtEnd(node_t *head, int data) {
 		return head;
 	}
 
-	/*if no empty Traverse the list to find the last node*/
+	/*if not empty Traverse the list to find the last node*/
 	*currentNode = head;
 	while (currentNode->next != NULL) {
 		currentNode = currentNode->next;
