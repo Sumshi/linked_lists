@@ -11,6 +11,10 @@ int main() {
 	// Create a new linked list node
 	node_t *new_node;
 	new_node = malloc(sizeof(node_t));
+	if (new_node == NULL)
+	{
+		return NULL;//allocation failed
+	}
 
 	// Set the node's data
 	new_node->data = 42;
