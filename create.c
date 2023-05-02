@@ -2,23 +2,24 @@
 #include <stdlib.h>
 
 // Define the structure of a linked list node
-struct Node {
+typedef struct Node {
 	int data;           // The data stored in the node
 	struct Node *next;  // Pointer to the next node in the list
-};
+}node_t;
 
 int main() {
 	// Create a new linked list node
-	struct Node *node = (struct Node*) malloc(sizeof(struct Node));
+	node_t *new_node;
+	new_node = malloc(sizeof(node_t));
 
 	// Set the node's data
-	node->data = 42;
+	new_node->data = 42;
 
 	// Set the node's next pointer to NULL
-	node->next = NULL;
+	new_node->next = NULL;
 
 	// Display the node's data
-	printf("Node data: %d\n", node->data);
+	printf("Node data: %d\n", new_node->data);
 
 	return 0;
 }
